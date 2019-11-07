@@ -9,9 +9,7 @@ pub trait Featurizable<const DIM: usize> {
 impl Featurizable<1> for u32 {
     #[inline]
     fn fill_slice(&self, slice: &mut [f32]) {
-        println!("val {:?}", *self);
         slice[0] = *self as f32;
-        println!("slice {:?}", slice);
     }
     fn default(_slice: &mut [f32]) {}
 }
@@ -19,9 +17,7 @@ impl Featurizable<1> for u32 {
 impl Featurizable<1> for f32 {
     #[inline]
     fn fill_slice(&self, slice: &mut [f32]) {
-        println!("val {:?}", *self);
         slice[0] = *self as f32;
-        println!("slice {:?}", slice);
     }
     fn default(_slice: &mut [f32]) {}
 }
